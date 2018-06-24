@@ -47,15 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
+    <Compile Include="Services\IEmployeeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\e2edata\e2edata.csproj">
+      <Project>{67f73e1f-4570-4f18-91eb-58ea21744f43}</Project>
+      <Name>e2edata</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\e2eFramework\e2eFramework.csproj">
+      <Project>{7dfff59c-8cba-4f6c-9236-b6278496a2b3}</Project>
+      <Name>e2eFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

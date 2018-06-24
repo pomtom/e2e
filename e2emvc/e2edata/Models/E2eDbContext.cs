@@ -6,7 +6,7 @@ namespace e2edata.Models
     {
         public E2eDbContext()
         {
-            //Database.SetInitializer<E2eDbContext>(new DropCreateDatabaseIfModelChanges<E2eDbContext>());
+            Database.SetInitializer<E2eDbContext>(new DropCreateDatabaseIfModelChanges<E2eDbContext>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
