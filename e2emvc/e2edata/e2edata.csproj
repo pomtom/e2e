@@ -60,11 +60,5 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\e2eFramework\e2eFramework.csproj">
-      <Project>{7dfff59c-8cba-4f6c-9236-b6278496a2b3}</Project>
-      <Name>e2eFramework</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,5 @@
 ﻿using e2ebusiness.Services;
 using e2edata.Repository;
-using e2eFramework;
 using System.Web.Http;
 using Unity;
 
@@ -16,11 +15,10 @@ namespace e2eapi
         private static IUnityContainer BuildUnityContainer()
         {
             var container = new UnityContainer();
-            GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
+            //container.RegisterType(typeof(IBaseRepository<>), typeof(BaseRepository<,>));
             BusinessComponent(container);
             DataBaseComponent(container);
-            container.RegisterType(typeof(IBaseRepository<>), typeof(BaseRepository<,>));
-
+            GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
 
             return container;
         }

@@ -24,7 +24,7 @@ namespace e2eapi.Controllers
             try
             {
                 var vr = _employeeService.GetAllEmployee();
-                return Request.CreateResponse(HttpStatusCode.OK, vr.ToString());
+                return Request.CreateResponse(HttpStatusCode.OK, vr);
             }
             catch (System.Exception ex)
             {

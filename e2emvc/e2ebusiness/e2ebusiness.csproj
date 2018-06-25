@@ -61,10 +61,6 @@
       <Project>{67f73e1f-4570-4f18-91eb-58ea21744f43}</Project>
       <Name>e2edata</Name>
     </ProjectReference>
-    <ProjectReference Include="..\e2eFramework\e2eFramework.csproj">
-      <Project>{7dfff59c-8cba-4f6c-9236-b6278496a2b3}</Project>
-      <Name>e2eFramework</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

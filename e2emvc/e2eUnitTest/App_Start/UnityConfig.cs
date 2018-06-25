@@ -1,21 +1,28 @@
-using System.Web.Http;
+using e2ebusiness.Services;
+using e2edata.Repository;
 using Unity;
-using Unity.WebApi;
 
 namespace e2eUnitTest
 {
     public static class UnityConfig
     {
-        public static void RegisterComponents()
+        public static IUnityContainer RegisterComponents()
         {
 			var container = new UnityContainer();
-            
-            // register all your components with the container here
-            // it is NOT necessary to register your controllers
-            
-            // e.g. container.RegisterType<ITestService, TestService>();
-            
-            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
+            BusinessComponent(container);
+            DataBaseComponent(container);
+
+            return container;
+        }
+
+        private static void DataBaseComponent(UnityContainer container)
+        {
+            container.RegisterType<IEmployeeRepository, EmployeeRepository>();
+        }
+
+        private static void BusinessComponent(UnityContainer container)
+        {
+            container.RegisterType<IEmployeeService, EmployeeService>();
         }
     }
 }

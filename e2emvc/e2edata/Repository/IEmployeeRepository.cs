@@ -1,10 +1,11 @@
 ﻿using e2edata.Models;
-using e2eFramework;
+using System.Collections.Generic;
 
 namespace e2edata.Repository
 {
-    public interface IEmployeeRepository : IBaseRepository<Employees>
+    public interface IEmployeeRepository 
     {
         Employees GetSingle(int id);
+        IEnumerable<Employees> GetAllEmployee();
     }
 }

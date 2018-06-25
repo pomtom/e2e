@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http;
 using e2edata.Models;
 using e2edata.Repository;
 
@@ -21,7 +22,7 @@ namespace e2ebusiness.Services
 
         public IEnumerable<Employees> GetAllEmployee()
         {
-            return this._employeeRepository.GetAll();
+            return this._employeeRepository.GetAllEmployee();
         }
     }
 }

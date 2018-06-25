@@ -49,6 +49,12 @@
     <Reference Include="CommonServiceLocator, Version=2.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.5.2.0\lib\net45\CommonServiceLocator.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -315,10 +321,6 @@
     <ProjectReference Include="..\e2edata\e2edata.csproj">
       <Project>{67f73e1f-4570-4f18-91eb-58ea21744f43}</Project>
       <Name>e2edata</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\e2eFramework\e2eFramework.csproj">
-      <Project>{7dfff59c-8cba-4f6c-9236-b6278496a2b3}</Project>
-      <Name>e2eFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
