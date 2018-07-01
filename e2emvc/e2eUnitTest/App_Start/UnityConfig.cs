@@ -8,7 +8,7 @@ namespace e2eUnitTest
     {
         public static IUnityContainer RegisterComponents()
         {
-			var container = new UnityContainer();
+            var container = new UnityContainer();
             BusinessComponent(container);
             DataBaseComponent(container);
 
@@ -18,7 +18,10 @@ namespace e2eUnitTest
         private static void DataBaseComponent(UnityContainer container)
         {
             container.RegisterType<IEmployeeRepository, EmployeeRepository>();
+            container.RegisterType<IProductRepository, ProductRepository>();
+
         }
+
 
         private static void BusinessComponent(UnityContainer container)
         {

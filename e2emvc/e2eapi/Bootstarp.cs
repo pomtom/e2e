@@ -26,7 +26,9 @@ namespace e2eapi
         private static void DataBaseComponent(UnityContainer container)
         {
             container.RegisterType<IEmployeeRepository, EmployeeRepository>();
+            container.RegisterType<IProductRepository, ProductRepository>();
         }
+
 
         private static void BusinessComponent(UnityContainer container)
         {
