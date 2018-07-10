@@ -15,6 +15,7 @@ using System.Web.Http;
 
 namespace e2eapi.Controllers
 {
+    //https://github.com/jacobslusser/JwtAuthRenewWebApi
     [RoutePrefix("api/v1/users")]
     public class UsersController : ApiController
     {
