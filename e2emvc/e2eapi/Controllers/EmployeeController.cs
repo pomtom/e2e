@@ -1,13 +1,12 @@
 ﻿using e2ebusiness.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace e2eapi.Controllers
 {
+    [RoutePrefix("api/v1/Employee")]
     public class EmployeeController : ApiController
     {
 
@@ -18,8 +17,20 @@ namespace e2eapi.Controllers
             this._employeeService = employeeService;
         }
 
+
+        [Route("")]
+        public async Task<IHttpActionResult> Get()
+        {
+            return Ok(new
+            {
+                Message = "Hello World!"
+            });
+        }
+
+        [Route("All")]
+        [Authorize]
         [HttpGet]
-        public HttpResponseMessage GetAll()
+        public HttpResponseMessage Employees()
         {
             try
             {

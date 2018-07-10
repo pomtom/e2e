@@ -1,0 +1,20 @@
+﻿[
+  {
+    "UserId": 100,
+    "FullName": "Pramod Lawate",
+    "EmailAddress": "pramod@example.com",
+    "Password": "Password1"
+  },
+  {
+    "UserId": 101,
+    "FullName": "Akshay Kumar",
+    "EmailAddress": "Akshay@example.com",
+    "Password": "Password1"
+  },
+  {
+    "UserId": 102,
+    "FullName": "Ameer Khan",
+    "EmailAddress": "Ameer@example.com",
+    "Password": "Password1"
+  }
+]

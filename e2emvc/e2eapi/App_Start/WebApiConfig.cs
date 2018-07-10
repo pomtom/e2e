@@ -1,4 +1,6 @@
-﻿using System;
+﻿using e2eapi.JWT;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web.Http;
@@ -19,6 +21,15 @@ namespace e2eapi
             );
 
             config.Formatters.Add(new CustomeJsonFormatter());
+
+            // Configure the authentication filter to run on every request marked with the AuthorizeAttribute
+            config.Filters.Add(new BearerAuthenticationFilter());
+
+            // Configure the sliding expiration handler to run on every request
+            config.MessageHandlers.Add(new SlidingExpirationHandler());
+
+            // Help our JSON look professional using camelCase
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }
     }
 
