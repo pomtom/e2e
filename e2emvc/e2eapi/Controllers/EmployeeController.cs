@@ -28,7 +28,6 @@ namespace e2eapi.Controllers
         }
 
         [Route("All")]
-        [Authorize]
         [HttpGet]
         public HttpResponseMessage Employees()
         {

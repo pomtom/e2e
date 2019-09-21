@@ -7,5 +7,7 @@ namespace e2edata.Repository
     {
         Employees GetSingle(int id);
         IEnumerable<Employees> GetAllEmployee();
+        void CreateEmployee(Employees emp);
+        void UpdateEmplouee(Employees emp);
     }
 }

@@ -21,5 +21,16 @@ namespace e2edata.Repository
         {
             return context.Employees.ToList();
         }
+
+        public void CreateEmployee(Employees emp)
+        {
+            context.Employees.Add(emp);
+            context.SaveChanges();
+        }
+
+        public void UpdateEmplouee(Employees emp)
+        {
+            
+        }
     }
 }
